@@ -34,7 +34,7 @@ catch potential bugs in your CI before your plugin's users do.
 #### :hammer_and_wrench: Tools
 
 - [lua-typecheck-action](https://github.com/marketplace/actions/lua-typecheck-action)
-- [lux-cli](https://nvim-neorocks.github.io/)
+- [lux-cli](https://lumen-oss.github.io/)
   - `lx check` for static type checking using emmlylua-analyzer-rust
   - `lx lint` for linting with luacheck
 - [emmylua-analyzer-rust](https://github.com/EmmyLuaLs/emmylua-analyzer-rust)
@@ -650,8 +650,8 @@ e.g. because you believe doing so is a commitment to stability.
 
 #### :books: Further reading
 
-- [rocks.nvim/Introduction](https://github.com/nvim-neorocks/rocks.nvim?tab=readme-ov-file#moon-introduction)
-- [Luarocks :purple_heart: Neovim](https://github.com/nvim-neorocks/sample-luarocks-plugin)
+- [rocks.nvim/Introduction](https://github.com/lumen-oss/rocks.nvim?tab=readme-ov-file#moon-introduction)
+- [Luarocks :purple_heart: Neovim](https://github.com/lumen-oss/sample-luarocks-plugin)
 
 #### :hammer_and_wrench: Tools
 
@@ -729,7 +729,7 @@ for testing, primarily for the following reasons:
 > [!TIP]
 >
 > For combining busted with other test frameworks,
-> check out our [busted interop examples](https://github.com/nvim-neorocks/busted-interop-examples).
+> check out our [busted interop examples](https://github.com/lumen-oss/busted-interop-examples).
 
 #### :page_facing_up: Template
 
@@ -746,7 +746,7 @@ for testing, primarily for the following reasons:
 
 - [`nvim-busted-action`](https://github.com/marketplace/actions/nvim-busted-action)
 - [`nlua`](https://github.com/mfussenegger/nlua)
-- [`neorocksTest`](https://github.com/nvim-neorocks/neorocks) (for Nix users)
+- [`neorocksTest`](https://github.com/lumen-oss/neorocks) (for Nix users)
 - [Neotest](https://github.com/nvim-neotest/neotest) adapters:
   - [`HiPhish/neotest-busted`](https://gitlab.com/HiPhish/neotest-busted)
   - [`MisanthropicBit/neotest-busted`](https://github.com/MisanthropicBit/neotest-busted)
