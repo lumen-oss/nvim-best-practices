@@ -534,7 +534,7 @@ local user_config = type(vim.g.my_plugin) == "function" and vim.g.my_plugin() or
 local config = -- ...merge configs
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 >
 > This does have some downsides:
 >
@@ -552,9 +552,9 @@ Alternatively, you can use `(partial)` classes to reduce boilerplate:
 
 -- the `(partial)` attribute below makes all fields nullable
 
----@class (partial) myplugin.ConfigInput: myplugin.Config
+---@class (partial) myplugin.Opts: myplugin.Config
 
----@type myplugin.ConfigInput | fun():myplugin.ConfigInput | nil
+---@type myplugin.Opts | fun():myplugin.Opts | nil
 vim.g.my_plugin = vim.g.my_plugin
 
 --------------------------------------------------------------
@@ -578,12 +578,12 @@ local config = -- ...merge configs
 >
 > **Caveats of using `(partial)` classes:**
 >
-> - Some doc generator tools may not yet have good support for generating
+> - Vimdoc generator tools may not yet have good support for generating
 >   documentation from `(partial)` classes.
 > - Using `(partial)` classes exposes the internal class as part of your public API,
 >   which may not be worth the reduced boilerplate in some cases.
 >
-> On the other hand, this approach can mean less effort in keeping classes synchronized.
+> On the other hand, this approach can mean less effort in keeping classes synchronised.
 
 ### :white_check_mark: DO
 
