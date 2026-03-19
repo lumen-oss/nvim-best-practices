@@ -545,6 +545,46 @@ local config = -- ...merge configs
 > Since this provides increased type safety for both the plugin
 > and the user's config, I believe it is well worth the slight inconvenience.
 
+Alternatively, you can use `(partial)` classes to reduce boilerplate:
+
+```lua
+-- config/meta.lua
+
+-- the `(partial)` attribute below makes all fields nullable
+
+---@class (partial) myplugin.ConfigInput: myplugin.Config
+
+---@type myplugin.ConfigInput | fun():myplugin.ConfigInput | nil
+vim.g.my_plugin = vim.g.my_plugin
+
+--------------------------------------------------------------
+-- config/internal.lua
+
+---@class myplugin.Config
+local default_config = {
+    ---@type boolean
+    do_something_cool = true,
+    ---@type "random" | "periodic"
+    strategy = "random",
+}
+
+local user_config = type(vim.g.my_plugin) == "function" and vim.g.my_plugin() or vim.g.my_plugin or {}
+
+---@type myplugin.Config
+local config = -- ...merge configs
+```
+
+> [!NOTE]
+>
+> **Caveats of using `(partial)` classes:**
+>
+> - Some doc generator tools may not yet have good support for generating
+>   documentation from `(partial)` classes.
+> - Using `(partial)` classes exposes the internal class as part of your public API,
+>   which may not be worth the reduced boilerplate in some cases.
+>
+> On the other hand, this approach can mean less effort in keeping classes synchronized.
+
 ### :white_check_mark: DO
 
 ...validate configs.
