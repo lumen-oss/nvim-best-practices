@@ -637,7 +637,7 @@ And invalid config will result in an error message like
 `"vim.g.my_plugin.strategy: expected string, got number"`.
 
 By doing this, you can use the validation with both 
-[`:h vim.notify`](https://neovim.io/doc/user/lua.html#vim.notify()) and [`:h vim.health`](https://neovim.io/doc/user/pi_health.html#health-functions).
+[`:h vim.notify`](https://neovim.io/doc/user/lua.html#vim.notify()) and [`:h vim.health`](https://neovim.io/doc/user/health.html#vim.health).
 
 ## :stethoscope: Troubleshooting
 
@@ -658,7 +658,7 @@ a guide on how to use it to reproduce issues.
 
 #### :books: Further reading
 
-- [`:h vim.health`](https://neovim.io/doc/user/pi_health.html#health-functions)
+- [`:h vim.health`](https://neovim.io/doc/user/health.html#vim.health)
 
 ## :hash: Versioning and releases
 
@@ -777,7 +777,7 @@ for testing, primarily for the following reasons:
 
 #### :books: Further reading
 
-- [Using Neovim as Lua interpreter with Luarocks](https://zignar.net/2023/01/21/using-luarocks-as-lua-interpreter-with-luarocks/)
+- [Using Neovim as Lua interpreter with Luarocks](https://zignar.net/2023/01/21/using-Luarocks-as-lua-interpreter-with-luarocks/)
 - [Testing Neovim plugins with Busted](https://hiphish.github.io/blog/2024/01/29/testing-neovim-plugins-with-busted/)
 - [Test your Neovim plugins with luarocks & busted](https://mrcjkb.dev/posts/2023-06-06-luarocks-test.html)
 - [Debugging Lua in Neovim](https://zignar.net/2023/06/10/debugging-lua-in-neovim/)
